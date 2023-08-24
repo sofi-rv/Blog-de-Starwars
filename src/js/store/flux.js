@@ -1,6 +1,8 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			characters: [],
+			urlBase: "https://www.swapi.tech/api/",
 			demo: [
 				{
 					title: "FIRST",
@@ -37,6 +39,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			getCharacters: () => {
+				fetch('${getStore().urlBase}/people')
+					.then((response) => response.json())
+					.then((data) => {
+						for (let item of data) {
+							console.log(item)
+						}
+					})
 			}
 		}
 	};
