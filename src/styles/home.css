@@ -1,9 +1,19 @@
 .my-card{
-   border: 1px solid red; 
    min-width: 400px;
-   margin-left: 30px;
+   margin-right: 30px;
+   margin-top: 20px;
+}
+.my-card > div > img{
+width: 100%;
 }
 .my-carousel{
    display: flex;
    overflow-x: scroll;
+}
+.body-text, .button-footer{
+   padding: 15px;
+}
+.button-footer{
+   display: flex;
+   justify-content: space-between;
 }

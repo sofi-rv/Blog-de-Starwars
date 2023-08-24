@@ -8,57 +8,41 @@ export const Home = () => {
 			<div className="container">
 				<h1 className="text-danger">Characters</h1>
 				<div className="my-carousel">
-					<div className="my-card">
+					<div className="my-card border">
 						<div>
-							<img src="https://picsum.photos/200" alt="..." />
+							<img src="https://picsum.photos/200/200" alt="..." />
 						</div>
-						<div>
-							<p>Name</p>
-							<p>Gender</p>
-							<p>Hair-Color</p>
-							<p>Eye-Color</p>
+						<div className="body-text">
+							<p>Name:</p>
+							<p>Gender:</p>
+							<p>Hair-Color:</p>
+							<p>Eye-Color:</p>
 						</div>
-						<button className="btn btn-outline-primary">Learn More!</button>
-						<button className="btn btn-outline-warning"><i className="far fa-heart"></i></button>
+						<div className="button-footer">
+							<button className="btn btn-outline-primary">Learn More!</button>
+							<button className="btn btn-outline-warning"><i class="fas fa-heart"></i></button>
+						</div>
 					</div>
-					<div className="my-card">
+				</div>
+			</div >
+
+
+			<div className="container mt-5">
+				<h1 className="text-danger">Planets</h1>
+				<div className="my-carousel">
+					<div className="my-card border">
 						<div>
-							<img src="https://picsum.photos/200" alt="..." />
+							<img src="https://picsum.photos/200/200" alt="..." />
 						</div>
-						<div>
-							<p>Name</p>
-							<p>Gender</p>
-							<p>Hair-Color</p>
-							<p>Eye-Color</p>
+						<div className="body-text">
+							<p>Population:</p>
+							<p>Terrain:</p>
+							
 						</div>
-						<button className="btn btn-outline-primary">Learn More!</button>
-						<button className="btn btn-outline-warning"><i className="far fa-heart"></i></button>
-					</div>
-					<div className="my-card">
-						<div>
-							<img src="https://picsum.photos/200" alt="..." />
+						<div className="button-footer">
+							<button className="btn btn-outline-primary">Learn More!</button>
+							<button className="btn btn-outline-warning"><i class="fas fa-heart"></i></button>
 						</div>
-						<div>
-							<p>Name</p>
-							<p>Gender</p>
-							<p>Hair-Color</p>
-							<p>Eye-Color</p>
-						</div>
-						<button className="btn btn-outline-primary">Learn More!</button>
-						<button className="btn btn-outline-warning"><i className="far fa-heart"></i></button>
-					</div>
-					<div className="my-card">
-						<div>
-							<img src="https://picsum.photos/200" alt="..." />
-						</div>
-						<div>
-							<p>Name</p>
-							<p>Gender</p>
-							<p>Hair-Color</p>
-							<p>Eye-Color</p>
-						</div>
-						<button className="btn btn-outline-primary">Learn More!</button>
-						<button className="btn btn-outline-warning"><i className="far fa-heart"></i></button>
 					</div>
 				</div>
 			</div >
