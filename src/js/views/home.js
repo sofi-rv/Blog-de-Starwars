@@ -1,13 +1,14 @@
 import React, { useContext } from "react";
 import "../../styles/home.css";
 import { Context } from "../store/appContext";
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 
 export const Home = () => {
 
 	const { store, actions } = useContext(Context)
+
 
 	return (
 		<>
@@ -18,7 +19,7 @@ export const Home = () => {
 						return (
 							<div key={item._id} className="my-card border">
 								<div>
-									<img src= {`https://starwars-visualguide.com/assets/img/characters/${item.uid}.jpg`} alt="..." />
+									<img src={`https://starwars-visualguide.com/assets/img/characters/${item.uid}.jpg`} alt="Card image cap" />
 								</div>
 								<div className="body-text">
 									<p><strong>Name:</strong> {item.properties.name}</p>
@@ -28,8 +29,8 @@ export const Home = () => {
 								</div>
 								<div className="button-footer">
 
-									<Link to={`/people/${item._id}`}  className="btn btn-outline-primary">Learn More!</Link>
-									<button className="btn btn-outline-warning"  onClick={()=> actions.addFavorite(item)}><i class="fas fa-heart"></i></button>
+									<Link to={`/characters/${item._id}`} className="btn btn-outline-primary">Learn More!</Link>
+									<button className="btn btn-outline-warning" onClick={() => actions.addFavorite(item)}><i class="fas fa-heart"></i></button>
 								</div>
 							</div>
 						)
@@ -40,25 +41,25 @@ export const Home = () => {
 			<div className="container mt-5">
 				<h1 className="text-danger">Planets</h1>
 				<div className="my-carousel">
-				{store.planets.map((item) => {
+					{store.planets.map((item) => {
 						return (
 							<div key={item._id} className="my-card border">
-						<div>
-							<img src={`https://starwars-visualguide.com/assets/img/planets/${item.uid}.jpg`} alt="..." />
-						</div>
-						<div className="body-text">
-							<p><strong>Population:</strong> {item.properties.population}</p>
-							<p><strong>Terrain:</strong> {item.properties.terrain}</p>
+								<div>
+									<img src={`https://starwars-visualguide.com/assets/img/planets/${item.uid}.jpg`} alt="..." />
+								</div>
+								<div className="body-text">
+									<p><strong>Population:</strong> {item.properties.population}</p>
+									<p><strong>Terrain:</strong> {item.properties.terrain}</p>
 
-						</div>
-						<div className="button-footer">
-						<Link to={`/planets/${item._id}`}  className="btn btn-outline-primary">Learn More!</Link>
-							<button className="btn btn-outline-warning" onClick={()=> actions.addFavorite(item)}><i class="fas fa-heart"></i></button>
-						</div>
-					</div>
+								</div>
+								<div className="button-footer">
+									<Link to={`/planets/${item._id}`} className="btn btn-outline-primary">Learn More!</Link>
+									<button className="btn btn-outline-warning" onClick={() => actions.addFavorite(item)}><i class="fas fa-heart"></i></button>
+								</div>
+							</div>
 						)
 					})}
-					
+
 				</div>
 			</div >
 		</>
