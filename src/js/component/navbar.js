@@ -7,11 +7,9 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			<div className="container">
-				<Link to="/">
-					<span className="navbar-brand mb-0 h1">
-						<h1>Star Wars</h1>
-					</span>
-				</Link>
+				<span className="navbar-brand ms-5 mb-0 h1">
+					<a href="/"><img src="https://i.ibb.co/khNRBYC/star-wars-logo.png" alt="star-wars-logo" border="0" /></a>
+				</span>
 				<div className="ml-auto">
 					<Link to="/demo">
 						<div className="dropdown">
