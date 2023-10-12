@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 export const Navbar = () => {
-	const { store } = useContext(Context)
+	const { store, actions } = useContext(Context)
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			<div className="container">
@@ -22,7 +22,7 @@ export const Navbar = () => {
 								{store.favorites.length <= 0 ? "empty" :
 									store.favorites.map((item) => {
 										return (
-											<li key={item._id}><a className="dropdown-item" href="#">{item.properties.name}</a></li>
+											<li key={item._id}><Link className="dropdown-item" to="/">{item.properties.name} <span onClick={() => actions.deleteFavorite(item)}><i class="fas fa-trash"></i></span></Link></li>
 										)
 									})
 								}

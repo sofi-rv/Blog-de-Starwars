@@ -24,7 +24,7 @@ const Detail =() =>{
        <div className="container mt-5 p-5 rounded">
                 <div className="row">
                     <div className="col-6">
-                        <img className="mx-auto d-block" style={{ height: "500px" }} src="..." alt="Card image cap"></img>
+                        <img className="mx-auto d-block" style={{ height: "500px" }} src={`https://starwars-visualguide.com/assets/img/${params.nature}/${search?.uid}.jpg`} alt="Card image cap"></img>
                     </div>
                     <div className="col-6">
                         <h1 className="text-dark d-flex justify-content-end pb-4">{search?.properties?.name}</h1>
